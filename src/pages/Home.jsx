@@ -9,24 +9,28 @@ const services = [
     title: "First Time Buyers",
     description:
       "Ready to stop renting and start owning? I specialize in guiding first-time buyers through every step — from pre-approval to closing day.",
+    link: "/first-time-buyers",
   },
   {
     icon: <Building size={36} className="text-red-600" />,
     title: "New Construction",
     description:
       "Thinking about building new? I help buyers navigate new construction contracts, upgrades, and builder negotiations so you get the best deal.",
+    link: "/new-construction",
   },
   {
     icon: <HomeIcon size={36} className="text-red-600" />,
     title: "Buying a Home",
     description:
       "Whether it's your first home or your fifth, I work tirelessly to find you the right home at the right price in the right neighborhood.",
+    link: "/buying",
   },
   {
     icon: <Users size={36} className="text-red-600" />,
     title: "Selling Your Home",
     description:
       "Ready to sell? I create a custom marketing strategy to get your home maximum exposure and the best possible price.",
+    link: "/selling",
   },
 ];
 
@@ -106,9 +110,17 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
                   {service.description}
                 </p>
+                {service.link && (
+                  <Link
+                    to={service.link}
+                    className="text-red-600 font-semibold hover:underline text-sm"
+                  >
+                    Learn More →
+                  </Link>
+                )}
               </div>
             ))}
           </div>

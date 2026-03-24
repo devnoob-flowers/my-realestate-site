@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Search } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
   const [searchTerm, setSearchTerm] = useState("");
-  const navigate = useNavigate();
 
   const handleSearch = (e) => {
     e.preventDefault();
-    navigate(`/listings?search=${searchTerm}`);
+    const query = searchTerm || "The Woodlands";
+    window.open(
+      `https://www.har.com/search/dosearch?search_input=${encodeURIComponent(query)}&search_type=keyword`,
+      "_blank",
+    );
   };
 
   return (
@@ -38,7 +40,7 @@ export default function Hero() {
         >
           <input
             type="text"
-            placeholder="Search by city, neighborhood, or zip code..."
+            placeholder="Search address, city, zip, or neighborhood..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="flex-1 px-6 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-red-500"
