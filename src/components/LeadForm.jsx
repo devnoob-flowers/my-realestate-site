@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { supabase } from "../lib/supabase";
 import { CheckCircle } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 export default function LeadForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -14,12 +14,23 @@ export default function LeadForm() {
 
   const onSubmit = async (data) => {
     setLoading(true);
-    const { error } = await supabase.from("leads").insert([data]);
-    if (error) {
-      console.error("Supabase error:", error);
-      alert("Something went wrong: " + error.message);
-    } else {
+    try {
+      await emailjs.send(
+        "service_realestate",
+        "template_4m2uxdq",
+        {
+          from_name: data.name,
+          from_email: data.email,
+          phone: data.phone || "Not provided",
+          interest: data.interest,
+          message: data.message || "No message provided",
+        },
+        "Av9IqtKBGyzljTMQd",
+      );
       setSubmitted(true);
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      alert("Something went wrong. Please call (409) 670-3370 directly.");
     }
     setLoading(false);
   };
@@ -28,9 +39,7 @@ export default function LeadForm() {
     return (
       <div className="text-center py-12">
         <CheckCircle size={64} className="text-green-500 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">
-          Message Received!
-        </h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
         <p className="text-gray-600">
           Thank you! Blake will be in touch within 24 hours.
         </p>
