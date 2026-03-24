@@ -15,7 +15,10 @@ export default function LeadForm() {
   const onSubmit = async (data) => {
     setLoading(true);
     const { error } = await supabase.from("leads").insert([data]);
-    if (!error) {
+    if (error) {
+      console.error("Supabase error:", error);
+      alert("Something went wrong: " + error.message);
+    } else {
       setSubmitted(true);
     }
     setLoading(false);
