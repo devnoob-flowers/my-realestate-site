@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import LeadForm from "../components/LeadForm";
 import { Phone, Mail, MapPin, Award, Heart, Home } from "lucide-react";
+import headshot from "../assets/headshot.jpg";
 
 const values = [
   {
@@ -66,7 +67,7 @@ export default function About() {
 
           <div className="flex-1 flex justify-center">
             <img
-              src="/src/assets/headshot.jpg"
+              src={headshot}
               alt="Blake Flowers"
               className="w-72 h-72 rounded-full object-cover object-top border-4 border-red-600 shadow-xl"
             />
