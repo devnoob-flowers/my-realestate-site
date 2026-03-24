@@ -141,11 +141,11 @@ export default function Home() {
             </Link>
           </div>
           <div className="flex-1 flex justify-center">
-            <div className="w-72 h-72 rounded-full bg-gray-700 flex items-center justify-center text-gray-400 text-center p-8 border-4 border-red-600">
-              <p className="text-sm">
-                Add your professional headshot photo here
-              </p>
-            </div>
+            <img
+              src="/src/assets/headshot.jpg"
+              alt="Blake Flowers"
+              className="w-72 h-72 rounded-full object-cover object-top border-4 border-red-600 shadow-xl"
+            />
           </div>
         </div>
       </section>
