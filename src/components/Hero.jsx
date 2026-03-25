@@ -18,7 +18,7 @@ export default function Hero() {
         </h1>
         <p className="text-xl md:text-2xl mb-10 text-gray-200 max-w-2xl mx-auto">
           Helping first-time buyers find their perfect home in The Woodlands and
-          Surrounding Areas.
+          surrounding areas.
         </p>
       </div>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
