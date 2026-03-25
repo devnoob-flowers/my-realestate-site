@@ -1,18 +1,4 @@
-import { useState } from "react";
-import { Search } from "lucide-react";
-
 export default function Hero() {
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    const query = searchTerm || "The Woodlands";
-    window.open(
-      `https://blakeflowers.kw.com/search#for-sale/tx/the-woodlands/${encodeURIComponent(query)}`,
-      "_blank",
-    );
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center">
       <div
@@ -34,39 +20,6 @@ export default function Hero() {
           Helping first-time buyers and families find their perfect home in The
           Woodlands, Spring, Tomball, Magnolia & Conroe.
         </p>
-        <form
-          onSubmit={handleSearch}
-          className="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto"
-        >
-          <input
-            type="text"
-            placeholder="Search address, city, zip, or neighborhood..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="flex-1 px-6 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-          />
-          <button
-            type="submit"
-            className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-bold text-lg flex items-center justify-center gap-2 transition"
-          >
-            <Search size={20} />
-            Search
-          </button>
-        </form>
-        <div className="flex flex-wrap justify-center gap-8 mt-16">
-          <div className="text-center">
-            <p className="text-4xl font-bold text-red-500">5★</p>
-            <p className="text-gray-300 text-sm mt-1">Google Reviews</p>
-          </div>
-          <div className="text-center">
-            <p className="text-4xl font-bold text-red-500">KW</p>
-            <p className="text-gray-300 text-sm mt-1">Keller Williams Agent</p>
-          </div>
-          <div className="text-center">
-            <p className="text-4xl font-bold text-red-500">6+</p>
-            <p className="text-gray-300 text-sm mt-1">Areas Served</p>
-          </div>
-        </div>
       </div>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center pt-2">

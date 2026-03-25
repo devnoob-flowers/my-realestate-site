@@ -95,7 +95,7 @@ export default function Navbar() {
             href="tel:+14096703370"
             className="bg-red-600 text-white px-4 py-2 rounded-lg font-medium text-center"
           >
-            Call Now
+            Contact Blake
           </a>
         </div>
       )}
