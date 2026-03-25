@@ -67,7 +67,7 @@ export default function About() {
 
           <div className="flex-1 flex justify-center">
             <img
-              src="/headshot.jpg"
+              src={headshot}
               alt="Blake Flowers"
               className="w-72 h-72 rounded-full object-cover object-top border-4 border-red-600 shadow-xl"
             />
@@ -175,10 +175,10 @@ export default function About() {
               <div className="text-left">
                 <p className="text-red-200 text-sm">Email Me</p>
                 <a
-                  href="mailto:blake@blakeflowersrealty.com"
+                  href="mailto:Blake.flowers@kw.com"
                   className="font-bold text-lg hover:underline"
                 >
-                  blake@blakeflowersrealty.com
+                  Blake.flowers@kw.com
                 </a>
               </div>
             </div>
@@ -187,9 +187,7 @@ export default function About() {
               <MapPin size={24} />
               <div className="text-left">
                 <p className="text-red-200 text-sm">Office</p>
-                <p className="font-bold text-lg">
-                  The Woodlands & Magnolia, TX
-                </p>
+                <p className="font-bold text-lg">The Woodlands, TX</p>
               </div>
             </div>
           </div>
