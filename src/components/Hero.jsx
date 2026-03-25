@@ -17,8 +17,8 @@ export default function Hero() {
           <span className="text-red-500">Real Estate</span>
         </h1>
         <p className="text-xl md:text-2xl mb-10 text-gray-200 max-w-2xl mx-auto">
-          Helping first-time buyers and families find their perfect home in The
-          Woodlands, Spring, Tomball, Magnolia & Conroe.
+          Helping first-time buyers find their perfect home in The Woodlands and
+          Surrounding Areas.
         </p>
       </div>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
