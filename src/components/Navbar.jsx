@@ -29,10 +29,10 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              to="/listings"
+              to="/find-a-home"
               className="text-gray-700 hover:text-red-600 font-medium transition"
             >
-              Listings
+              Find a Home
             </Link>
             <Link
               to="/about"
@@ -71,11 +71,11 @@ export default function Navbar() {
             Home
           </Link>
           <Link
-            to="/listings"
+            to="/find-a-home"
             onClick={() => setIsOpen(false)}
             className="text-gray-700 hover:text-red-600 font-medium"
           >
-            Listings
+            Find a Home
           </Link>
           <Link
             to="/about"

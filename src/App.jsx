@@ -1,17 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Listings from "./pages/Listings";
+import FindAHome from "./pages/FindAHome";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FirstTimeBuyers from "./pages/FirstTimeBuyers";
 import NewConstruction from "./pages/NewConstruction";
 import Buying from "./pages/Buying";
 import Selling from "./pages/Selling";
-
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,7 +29,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/listings" element={<Listings />} />
+            <Route path="/find-a-home" element={<FindAHome />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/first-time-buyers" element={<FirstTimeBuyers />} />
