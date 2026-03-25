@@ -11,6 +11,7 @@ import FirstTimeBuyers from "./pages/FirstTimeBuyers";
 import NewConstruction from "./pages/NewConstruction";
 import Buying from "./pages/Buying";
 import Selling from "./pages/Selling";
+import HomeValuation from "./pages/HomeValuation";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,6 +31,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/find-a-home" element={<FindAHome />} />
+            <Route path="/home-valuation" element={<HomeValuation />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/first-time-buyers" element={<FirstTimeBuyers />} />

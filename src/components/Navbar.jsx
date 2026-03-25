@@ -29,11 +29,18 @@ export default function Navbar() {
               Home
             </Link>
             <Link
+              to="/home-valuation"
+              className="text-gray-700 hover:text-red-600 font-medium transition"
+            >
+              Home Value
+            </Link>
+            <Link
               to="/find-a-home"
               className="text-gray-700 hover:text-red-600 font-medium transition"
             >
               Find a Home
             </Link>
+
             <Link
               to="/about"
               className="text-gray-700 hover:text-red-600 font-medium transition"
@@ -95,7 +102,7 @@ export default function Navbar() {
             href="tel:+14096703370"
             className="bg-red-600 text-white px-4 py-2 rounded-lg font-medium text-center"
           >
-            Contact Blake
+            Call Now
           </a>
         </div>
       )}
