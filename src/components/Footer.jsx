@@ -96,7 +96,9 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-gray-500 text-xs mt-4">
-              Update links with your actual social media profiles
+              Let's Connect on Social Media! Follow for the latest listings,
+              real estate tips, and local market updates in The Woodlands and
+              surrounding areas.
             </p>
           </div>
         </div>

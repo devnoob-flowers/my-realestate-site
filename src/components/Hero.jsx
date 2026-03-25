@@ -8,7 +8,7 @@ export default function Hero() {
     e.preventDefault();
     const query = searchTerm || "The Woodlands";
     window.open(
-      `https://www.har.com/search/dosearch?search_input=${encodeURIComponent(query)}&search_type=keyword`,
+      `https://blakeflowers.kw.com/search#for-sale/tx/the-woodlands/${encodeURIComponent(query)}`,
       "_blank",
     );
   };
