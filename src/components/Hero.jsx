@@ -17,7 +17,7 @@ export default function Hero() {
           <span className="text-red-500">Real Estate</span>
         </h1>
         <p className="text-xl md:text-2xl mb-10 text-gray-200 max-w-2xl mx-auto">
-          Rooted in The Woodlands. Invested in your future.
+          Expert guidance for one of life's biggest decisions.
         </p>
       </div>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
