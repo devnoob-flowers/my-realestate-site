@@ -1,7 +1,8 @@
 import Hero from "../components/Hero";
 import LeadForm from "../components/LeadForm";
-import { Home as HomeIcon, Key, Building, Users } from "lucide-react";
+import { Home as HomeIcon, Key, Building, Users, Search } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const services = [
   {
@@ -9,58 +10,69 @@ const services = [
     title: "First Time Buyers",
     description:
       "Ready to stop renting and start owning? I specialize in guiding first-time buyers through every step — from pre-approval to closing day.",
+    link: "/first-time-buyers",
   },
   {
     icon: <Building size={36} className="text-red-600" />,
     title: "New Construction",
     description:
       "Thinking about building new? I help buyers navigate new construction contracts, upgrades, and builder negotiations so you get the best deal.",
+    link: "/new-construction",
   },
   {
     icon: <HomeIcon size={36} className="text-red-600" />,
     title: "Buying a Home",
     description:
       "Whether it's your first home or your fifth, I work tirelessly to find you the right home at the right price in the right neighborhood.",
+    link: "/buying",
   },
   {
     icon: <Users size={36} className="text-red-600" />,
     title: "Selling Your Home",
     description:
       "Ready to sell? I create a custom marketing strategy to get your home maximum exposure and the best possible price.",
+    link: "/selling",
   },
 ];
 
+// ✏️ Update zip codes here if needed to match blakeflowers.kw.com's search params
 const neighborhoods = [
   {
     name: "The Woodlands",
+    zip: "77380",
     description:
       "Master-planned community with top-rated schools and world-class amenities.",
   },
   {
     name: "Spring",
+    zip: "77373",
     description:
       "Affordable family neighborhoods with easy access to Houston and The Woodlands.",
   },
   {
     name: "Tomball",
+    zip: "77375",
     description:
       "Charming small-town feel with growing communities and great schools.",
   },
   {
     name: "Magnolia",
+    zip: "77354",
     description:
       "Peaceful suburban living with acreage properties and new developments.",
   },
   {
     name: "Conroe",
+    zip: "77304",
     description:
       "Fast-growing area with lake living, new construction, and great value.",
   },
   {
-    name: "The Woodlands Hills",
-    description:
-      "One of the newest master-planned communities in the North Houston area.",
-  },
+  name: "Houston",
+  zip: "77002",
+  description:
+    "The nation's fourth-largest city with diverse neighborhoods, top employers, and a booming real estate market.",
+},
 ];
 
 const testimonials = [
@@ -81,11 +93,66 @@ const testimonials = [
   },
 ];
 
+// ✏️ If blakeflowers.kw.com uses a different search param (e.g. ?q= or ?location=),
+// update the param name in this function
+function kwSearchUrl(query) {
+  return `https://blakeflowers.kw.com/search?zipCode=${encodeURIComponent(query)}`;
+}
+
 export default function Home() {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  function handleSearch(e) {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      window.open(kwSearchUrl(searchQuery.trim()), "_blank");
+    }
+  }
+
   return (
     <div>
       <Hero />
 
+      {/* ── Search Bar ── */}
+      <section className="py-12 bg-gray-50 border-b border-gray-200">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <p className="text-red-600 font-semibold uppercase tracking-widest text-sm mb-2">
+            Start Your Search
+          </p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Find Homes For Sale
+          </h2>
+          <form onSubmit={handleSearch} className="flex gap-2 max-w-xl mx-auto">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Enter zip code, city, or neighborhood..."
+              className="flex-1 px-5 py-3 rounded-lg border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-red-500 text-sm"
+            />
+            <button
+              type="submit"
+              className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-bold transition flex items-center gap-2"
+            >
+              <Search size={18} />
+              Search
+            </button>
+          </form>
+          <p className="text-gray-400 text-xs mt-3">
+            Powered by{" "}
+            
+              href="https://blakeflowers.kw.com"
+              target="_blank"
+              rel="noreferrer"
+              className="underline hover:text-red-500 transition"
+            >
+              blakeflowers.kw.com
+            </a>
+          </p>
+        </div>
+      </section>
+
+      {/* ── Services ── */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
@@ -115,6 +182,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── About ── */}
       <section className="py-20 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1">
@@ -150,6 +218,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Testimonials ── */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
@@ -186,6 +255,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Areas I Serve ── */}
       <section className="py-20 bg-red-600">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
@@ -196,20 +266,29 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {neighborhoods.map((n) => (
-              <div
+              
                 key={n.name}
-                className="bg-white rounded-xl p-6 hover:shadow-xl transition"
+                href={kwSearchUrl(n.zip)}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-white rounded-xl p-6 hover:shadow-xl transition group block"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {n.name}
-                </h3>
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-600 transition">
+                    {n.name}
+                  </h3>
+                  <span className="text-red-500 opacity-0 group-hover:opacity-100 transition text-sm font-semibold">
+                    View Listings →
+                  </span>
+                </div>
                 <p className="text-gray-600 text-sm">{n.description}</p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
       </section>
 
+      {/* ── Lead Form ── */}
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-12">
