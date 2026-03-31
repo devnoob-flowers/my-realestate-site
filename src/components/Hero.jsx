@@ -32,8 +32,7 @@ export default function Hero() {
           <span className="text-red-500">Real Estate</span>
         </h1>
         <p className="text-xl md:text-2xl mb-10 text-gray-200 max-w-2xl mx-auto">
-          Helping first-time buyers and families find their perfect home in The
-          Woodlands, Spring, Tomball, Magnolia & Conroe.
+          Expert Guidance for one of life's biggest decisions
         </p>
 
         {/* Search Bar */}
