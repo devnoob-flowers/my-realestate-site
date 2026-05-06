@@ -6,6 +6,13 @@ import { useState } from "react";
 
 const services = [
   {
+    icon: <Users size={36} className="text-red-600" />,
+    title: "Selling Your Home",
+    description:
+      "Ready to sell? I create a custom marketing strategy to get your home maximum exposure and the best possible price.",
+    link: "/selling",
+  },
+  {
     icon: <Key size={36} className="text-red-600" />,
     title: "First Time Buyers",
     description:
@@ -25,13 +32,6 @@ const services = [
     description:
       "Whether it's your first home or your fifth, I work tirelessly to find you the right home at the right price in the right neighborhood.",
     link: "/buying",
-  },
-  {
-    icon: <Users size={36} className="text-red-600" />,
-    title: "Selling Your Home",
-    description:
-      "Ready to sell? I create a custom marketing strategy to get your home maximum exposure and the best possible price.",
-    link: "/selling",
   },
 ];
 

@@ -42,7 +42,7 @@ export default function Footer() {
                 className="flex items-center gap-2 text-gray-400 hover:text-white transition text-sm"
               >
                 <Mail size={16} className="text-red-500" />
-                bdflowerss@icloud.com
+                Blake.Flowers@kw.com
               </a>
               <p className="text-gray-400 text-sm">
                 The Woodlands & Magnolia, TX

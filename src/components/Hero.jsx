@@ -8,7 +8,11 @@ export default function Hero() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    window.open("https://blakeflowers.kw.com/search", "_blank");
+    const query = searchTerm || "The Woodlands";
+    window.open(
+      `https://www.har.com/search/dosearch?city=${encodeURIComponent(query)}&state_code=TX&_searchtype=city&prop_type=Single+Family+Homes`,
+      "_blank",
+    );
   };
 
   return (
@@ -32,7 +36,7 @@ export default function Hero() {
           <span className="text-red-500">Real Estate</span>
         </h1>
         <p className="text-xl md:text-2xl mb-10 text-gray-200 max-w-2xl mx-auto">
-          Expert Guidance for one of life's biggest decisions
+          Expert guidance for one of life's biggest decisions
         </p>
 
         {/* Search Bar */}

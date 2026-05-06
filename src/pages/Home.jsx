@@ -5,6 +5,20 @@ import { Link } from "react-router-dom";
 
 const services = [
   {
+    icon: <Users size={36} className="text-red-600" />,
+    title: "Selling Your Home",
+    description:
+      "Ready to sell? I create a custom marketing strategy to get your home maximum exposure and the best possible price.",
+    link: "/selling",
+  },
+  {
+    icon: <HomeIcon size={36} className="text-red-600" />,
+    title: "Buying a Home",
+    description:
+      "Whether it's your first home or your fifth, I work tirelessly to find you the right home at the right price in the right neighborhood.",
+    link: "/buying",
+  },
+  {
     icon: <Key size={36} className="text-red-600" />,
     title: "First Time Buyers",
     description:
@@ -17,20 +31,6 @@ const services = [
     description:
       "Thinking about building new? I help buyers navigate new construction contracts, upgrades, and builder negotiations so you get the best deal.",
     link: "/new-construction",
-  },
-  {
-    icon: <HomeIcon size={36} className="text-red-600" />,
-    title: "Buying a Home",
-    description:
-      "Whether it's your first home or your fifth, I work tirelessly to find you the right home at the right price in the right neighborhood.",
-    link: "/buying",
-  },
-  {
-    icon: <Users size={36} className="text-red-600" />,
-    title: "Selling Your Home",
-    description:
-      "Ready to sell? I create a custom marketing strategy to get your home maximum exposure and the best possible price.",
-    link: "/selling",
   },
 ];
 
@@ -89,6 +89,97 @@ export default function Home() {
   return (
     <div>
       <Hero />
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
+          <div className="flex-1">
+            <p className="text-red-600 font-semibold uppercase tracking-widest text-sm mb-4">
+              Realtor in The Woodlands, TX
+            </p>
+            <h2 className="text-5xl font-black text-gray-900 uppercase leading-tight mb-6">
+              You Need Someone <br />
+              Who Gets <br />
+              Homes Sold.
+            </h2>
+            <p className="text-gray-600 text-lg leading-relaxed mb-6">
+              Selling your home is one of the biggest financial decisions you
+              will ever make. You need an agent who knows your market, prices
+              your home right, and markets it aggressively to get you top
+              dollar, not someone who just puts a sign in the yard and waits.
+            </p>
+            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+              As a Keller Williams agent in The Woodlands, I bring a proven
+              marketing strategy, honest pricing, and relentless follow-through
+              to every listing. Serving The Woodlands, Spring, Tomball,
+              Magnolia, and Conroe — when you list with me, your home gets
+              results.
+            </p>
+            <Link
+              to="/about"
+              className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-bold transition inline-block"
+            >
+              More About Blake
+            </Link>
+          </div>
+          <div className="flex-1 flex justify-center">
+            <div className="relative w-full max-w-md">
+              <img
+                src="https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=800"
+                alt="The Woodlands Texas"
+                className="w-full h-96 object-cover rounded-2xl shadow-xl"
+              />
+              <div className="absolute -bottom-4 -right-4 bg-red-600 text-white rounded-full w-36 h-36 flex flex-col items-center justify-center text-center shadow-xl">
+                <p className="text-2xl font-black">KW</p>
+                <p className="text-xs font-bold uppercase leading-tight">
+                  Keller Williams
+                  <br />
+                  Agent
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="relative py-32 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-60" />
+        <div className="relative z-10 w-full max-w-4xl mx-auto px-4 text-center">
+          <p className="text-white font-semibold uppercase tracking-widest text-sm mb-4">
+            Realtor in The Woodlands & North Houston
+          </p>
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-10 leading-tight">
+            Get Your Home Value <br />
+            in Seconds
+          </h2>
+          <div className="max-w-2xl mx-auto w-full px-4">
+            <div className="flex flex-row bg-white rounded-lg overflow-hidden shadow-2xl">
+              <input
+                type="text"
+                placeholder="Enter your address"
+                className="flex-1 px-6 py-4 text-lg text-gray-900 focus:outline-none bg-white"
+                onClick={() => {
+                  window.location.href = "/home-valuation";
+                }}
+                readOnly
+                style={{ cursor: "pointer" }}
+              />
+              <Link
+                to="/home-valuation"
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 font-bold text-lg transition text-center whitespace-nowrap"
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
