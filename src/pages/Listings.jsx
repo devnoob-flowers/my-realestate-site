@@ -12,7 +12,7 @@ const listings = [
     badge: "Just Listed",
     harUrl:
       "https://www.har.com/homedetail/1339-bougainvillea-dr-conroe-tx-77301/16305207",
-    image: "src/assets/01-WSL00002_print.jpg",
+    image: "/01-WSL00002_print.jpg",
     description:
       "Move-in ready 4 bedroom home in Ladera Trails with open layout, upgraded kitchen, covered patio, outdoor kitchen, and EV charger.",
     features: [
@@ -35,7 +35,7 @@ const listings = [
     badge: "For Sale",
     harUrl:
       "https://www.har.com/homedetail/14210-glacier-bay-ct-conroe-tx-77384/15155771",
-    image: "src/assets/770125795.jpeg",
+    image: "/770125795.jpeg",
     description:
       "Beautiful 4 bedroom, 2 bath home on a 0.14 acre lot. Great layout and ready for its next owner.",
     features: ["4 Bedrooms", "2 Full Baths", "0.14 Acre Lot"],
