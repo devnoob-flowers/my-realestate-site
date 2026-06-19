@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import FindAHome from "./pages/FindAHome";
+import Listings from "./pages/Listings";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FirstTimeBuyers from "./pages/FirstTimeBuyers";
@@ -31,6 +32,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/find-a-home" element={<FindAHome />} />
+            <Route path="/listings" element={<Listings />} />
             <Route path="/home-valuation" element={<HomeValuation />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

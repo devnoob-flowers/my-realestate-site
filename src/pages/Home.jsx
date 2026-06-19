@@ -108,10 +108,10 @@ export default function Home() {
               dollar, not someone who just puts a sign in the yard and waits.
             </p>
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              As a Keller Williams agent in The Woodlands, I bring a proven
+              As a real estate agent in The Woodlands, I bring a proven
               marketing strategy, honest pricing, and relentless follow-through
               to every listing. Serving The Woodlands, Spring, Tomball,
-              Magnolia, and Conroe — when you list with me, your home gets
+              Magnolia, and Conroe. When you list with me, your home gets
               results.
             </p>
             <Link

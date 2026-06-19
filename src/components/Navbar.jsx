@@ -40,7 +40,12 @@ export default function Navbar() {
             >
               Find a Home
             </Link>
-
+            <Link
+              to="/listings"
+              className="text-gray-700 hover:text-red-600 font-medium transition"
+            >
+              Listings
+            </Link>
             <Link
               to="/about"
               className="text-gray-700 hover:text-red-600 font-medium transition"
@@ -78,11 +83,25 @@ export default function Navbar() {
             Home
           </Link>
           <Link
+            to="/home-valuation"
+            onClick={() => setIsOpen(false)}
+            className="text-gray-700 hover:text-red-600 font-medium"
+          >
+            Home Value
+          </Link>
+          <Link
             to="/find-a-home"
             onClick={() => setIsOpen(false)}
             className="text-gray-700 hover:text-red-600 font-medium"
           >
             Find a Home
+          </Link>
+          <Link
+            to="/listings"
+            onClick={() => setIsOpen(false)}
+            className="text-gray-700 hover:text-red-600 font-medium"
+          >
+            Listings
           </Link>
           <Link
             to="/about"

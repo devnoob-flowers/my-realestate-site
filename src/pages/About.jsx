@@ -92,20 +92,20 @@ export default function About() {
               Growing up, I saw firsthand how owning a home changes everything
               for a family. It creates stability, builds equity, and gives you a
               place to truly call your own. That's why I'm passionate about
-              helping renters make the leap into homeownership — because I know
+              helping renters make the leap into homeownership because I know
               what a difference it makes.
             </p>
             <p>
-              As a new agent with Keller Williams, I bring fresh energy,
+              As a real estate agent with Keller Williams, I bring fresh energy,
               up-to-date market knowledge, and an unmatched commitment to my
-              clients. I'm not juggling dozens of transactions at once — when
-              you work with me, you get my full attention and dedication from
-              our first conversation to closing day and beyond.
+              clients. I'm not juggling dozens of transactions at once. When you
+              work with me, you get my full attention and dedication from our
+              first conversation to closing day and beyond.
             </p>
             <p>
               I specialize in first-time buyers and new construction because
-              these are the clients who need the most guidance — and I love
-              being that guide. Whether you're trying to understand the mortgage
+              these are the clients who need the most guidance and I love being
+              that guide. Whether you're trying to understand the mortgage
               process, navigate a new construction contract, or figure out which
               neighborhoods fit your budget, I'm here to walk you through every
               single step.
